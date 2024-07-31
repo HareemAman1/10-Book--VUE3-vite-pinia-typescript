@@ -1,0 +1,58 @@
+$col1 : rgb(255, 209, 124);
+$col2 : purple;
+$col3 : white;
+ 
+@mixin place {
+    padding: 10px 8px;
+    border-radius: 8px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+ body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    // display: flex;
+    // place-items: center;
+    // min-width: 320px;
+    // min-height: 100vh;
+    background-color: $col1;
+  }
+  #app {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: left;
+  }
+
+  input{
+    @include place;
+    width: 30%;
+    border: 3px solid $col2;
+}
+  select{
+    @include place;
+    width: 32%;
+    border: 3px solid $col2;
+}
+
+  button{
+    padding: 10px 20px;
+    margin-top: 6px;
+    border: 3px solid $col2;
+    background-color: $col2;
+    color: $col3;
+    font-weight: 900;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+button:hover{
+    background: transparent;
+    color: $col2;
+
+}

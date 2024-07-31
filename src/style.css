@@ -1,0 +1,57 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+  background-color: rgb(255, 209, 124);
+}
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: left;
+}
+
+input {
+  padding: 10px 8px;
+  border-radius: 8px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  width: 30%;
+  border: 3px solid purple;
+}
+
+select {
+  padding: 10px 8px;
+  border-radius: 8px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  width: 32%;
+  border: 3px solid purple;
+}
+
+button {
+  padding: 10px 20px;
+  margin-top: 6px;
+  border: 3px solid purple;
+  background-color: purple;
+  color: white;
+  font-weight: 900;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+button:hover {
+  background: transparent;
+  color: purple;
+}
+
+/*# sourceMappingURL=style.css.map */
