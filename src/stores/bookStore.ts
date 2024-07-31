@@ -1,11 +1,14 @@
 import { defineStore } from 'pinia';
 
-// BASE CLASS
+// BASE CLASS: creates object with these properties
+// private: restricts direct access of the property
 class Book {
-  private _title: string;
+  private _title: string;  
   private _author: string;
   type: string;
 
+  // CONSTRUCTOR: a function called to create objects
+  // pass the value to constructor  
   constructor(title: string, author: string) {
     this._title = title;
     this._author = author;
@@ -13,11 +16,12 @@ class Book {
   }
 
 
+  // GET: return value of properties (get access of private in a controlled way)
   get title(): string {
     return this._title;
   }
 
-
+ // SET: sets value + validation
   set title(newTitle: string) {
     if (newTitle.trim()) {
       this._title = newTitle;
@@ -41,7 +45,8 @@ class Book {
   }
 }
 
-// INHERITANCE
+// INHERITANCE: have same properties as parent class + a new property
+// SUPER: calls constructor of parent class to initialize the inherited properties
 class Novel extends Book {
   private _genre: string;
 
