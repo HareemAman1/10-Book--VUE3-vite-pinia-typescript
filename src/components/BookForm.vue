@@ -37,7 +37,8 @@
   <script lang="ts">
   import { defineComponent, ref } from 'vue';
   import { useBookStore, Book, Novel, Textbook } from '../stores/bookStore';
-  
+  import axios from 'axios';
+
   export default defineComponent({
     setup() {
       const bookStore = useBookStore();
@@ -47,24 +48,49 @@
       const genre = ref('');
       const subject = ref('');
   
-      const addNewBook = () => {
-        let book;
-        if (type.value === 'Novel') {
-          book = new Novel(title.value, author.value, genre.value);
-        } else if (type.value === 'Textbook') {
-          book = new Textbook(title.value, author.value, subject.value);
-        } else {
-          book = new Book(title.value, author.value);
-        }
-        bookStore.addBook(book);
+      // const addNewBook = () => {
+      //   let book;
+      //   if (type.value === 'Novel') {
+      //     book = new Novel(title.value, author.value, genre.value);
+      //   } else if (type.value === 'Textbook') {
+      //     book = new Textbook(title.value, author.value, subject.value);
+      //   } else {
+      //     book = new Book(title.value, author.value);
+      //   }
+      //   bookStore.addBook(book);
         
         
+      //   title.value = '';
+      //   author.value = '';
+      //   type.value = 'Book';
+      //   genre.value = '';
+      //   subject.value = '';
+      // };
+      
+      const addNewBook = async () => {
+      let book;
+      if (type.value === 'Novel') {
+        book = new Novel(title.value, author.value, genre.value);
+      } else if (type.value === 'Textbook') {
+        book = new Textbook(title.value, author.value, subject.value);
+      } else {
+        book = new Book(title.value, author.value);
+      }
+      
+      // Save to backend
+      try {
+        await axios.post('http://localhost:3000/books', book);
+        bookStore.addBook(book); // Optionally update the Pinia store
         title.value = '';
         author.value = '';
         type.value = 'Book';
         genre.value = '';
         subject.value = '';
-      };
+      } catch (error) {
+        console.error('Error adding book:', error);
+      }
+    };
+
   
       return {
         title,
