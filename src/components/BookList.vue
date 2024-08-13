@@ -85,7 +85,7 @@
   }
 
   select{
-    width: 20%;
+    width: 27%;
     margin-right: 10px;
   }
 

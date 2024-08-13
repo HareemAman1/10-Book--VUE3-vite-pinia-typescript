@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="mid">
     <h1>Book Management</h1>
     <BookForm />
     <BookList />
@@ -18,3 +18,13 @@ export default defineComponent({
   },
 });
 </script>
+
+<style lang="scss" scoped>
+#mid{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+</style>

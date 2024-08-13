@@ -19,7 +19,7 @@ input {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
-  width: 30%;
+  width: 100%;
   border: 3px solid purple;
 }
 
@@ -31,7 +31,7 @@ select {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
-  width: 32%;
+  width: 100%;
   border: 3px solid purple;
 }
 
@@ -52,6 +52,4 @@ button {
 button:hover {
   background: transparent;
   color: purple;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

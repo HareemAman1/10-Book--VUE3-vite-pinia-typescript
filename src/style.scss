@@ -29,12 +29,12 @@ $col3 : white;
 
   input{
     @include place;
-    width: 30%;
+    width: 100%;
     border: 3px solid $col2;
 }
   select{
     @include place;
-    width: 32%;
+    width: 100%;
     border: 3px solid $col2;
 }
 
