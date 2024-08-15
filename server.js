@@ -7,7 +7,6 @@ app.use(express.json());
 
 const dataFilePath = path.resolve('data.json');
 
-
 app.get('/books', (req, res) => {
   if (fs.existsSync(dataFilePath)) {
     const fileContent = fs.readFileSync(dataFilePath, 'utf-8');
